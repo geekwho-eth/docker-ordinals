@@ -2,7 +2,7 @@ FROM ubuntu:23.04 as builder
 
 LABEL maintainer="GeekWho <caijiamx@gmail.com>"
 LABEL version="1.0"
-LABEL description="A bitcoin-core docker image"
+LABEL description="An Ordinals Docker Image"
 
 RUN apt-get update -y \
   && apt-get install -y ca-certificates wget curl --no-install-recommends \

@@ -28,7 +28,7 @@ ENV BITCOIN_RPC_LISTEN=127.0.0.1:8332
 
 LABEL maintainer="GeekWho <caijiamx@gmail.com>"
 LABEL version="1.0"
-LABEL description="An Ordinals ORD docker image"
+LABEL description="An Ordinals Docker Image"
 
 RUN addgroup ${USER_GROUP} --gid ${HOST_GID} --system
 RUN adduser --uid ${HOST_UID} --system ${USER_NAME} --ingroup ${USER_GROUP}
