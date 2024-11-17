@@ -1,12 +1,12 @@
-# geekwho-eth/bitcoin-core
+# geekwho-eth/docker-ordinals
 
 This is a project that includes multiple images, each with its own features and usage.
 
 ## Image List
 
-- - [Ord Docker Image](ord/README.md)
+- - [Ordinals Docker Image](ord/README.md)
 
-## Ordinals Ord Docker Image
+## Ordinals Docker Image
 
 This Docker image is built to run ordinals ord.
 
