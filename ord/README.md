@@ -3,7 +3,8 @@
 This Docker image is built to run Bitcoin Core and ord.
 
 # An Ordinals ORD Tags
-- `ord-alpine` ([ord/Dockerfile](https://github.com/geekwho-eth/docker-ordinals/blob/master/ord/Dockerfile))
+- `ord-alpine` ([ord/Dockerfile](https://github.com/geekwho-eth/docker-ordinals/blob/main/ord/alpine/Dockerfile))
+- `ord-ubuntu` ([ord/Dockerfile](https://github.com/geekwho-eth/docker-ordinals/blob/main/ord/ubuntu/Dockerfile))
 
 ord build by ordinals install.sh.
 
