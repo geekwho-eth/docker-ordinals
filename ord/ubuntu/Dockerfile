@@ -1,4 +1,4 @@
-FROM ubuntu:23.04 as builder
+FROM ubuntu:24.04 as builder
 
 LABEL maintainer="GeekWho <caijiamx@gmail.com>"
 LABEL version="1.0"
@@ -20,7 +20,7 @@ RUN wget ${ORD_INSTALL_SH} && chmod +x install.sh \
   && ./install.sh --to /usr/local/bin --target ${TARGET}
 
 # Second stage
-FROM ubuntu:23.04
+FROM ubuntu:24.04
 
 # Map host user uid and gid
 ARG HOST_UID=100
@@ -31,8 +31,8 @@ ENV USER_NAME=ord
 ENV USER_GROUP=ord
 ENV BITCOIN_RPC_LISTEN=127.0.0.1:8332
 
-RUN groupadd --gid ${HOST_GID} ${USER_GROUP} \
-  && useradd --create-home --no-log-init -u ${HOST_UID} -g ${HOST_GID} ${USER_NAME} \
+RUN groupadd --system --gid ${HOST_GID} ${USER_GROUP} \
+  && useradd --system --create-home --no-log-init -u ${HOST_UID} -g ${HOST_GID} ${USER_NAME} \
   && apt-get update -y \
   && apt-get install -y gosu curl --no-install-recommends \
   && apt-get clean \
